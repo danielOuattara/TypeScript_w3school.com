@@ -5,96 +5,74 @@ TypeScript Tutorial : https://www.w3schools.com/typescript/
 
 ------------------------------------------------------*/
 
-/* 
-TypeScript Simple Types
-==========================
-
-TypeScript supports some simple types (primitives) you may know.
-
-There are three main primitives in JavaScript and TypeScript.
-    > boolean - true or false values
-    > number  - whole numbers and floating point values
-    > string  - text values like "TypeScript Rocks"
-
-Type Assignment
-----------------
-When creating a variable, there are two main ways 
-TypeScript assigns a type:
-
- > Explicit
- > Implicit
-
-In both examples below firstName is of type string
-
---> Explicit - writing out the type: */
-let firstName1: string = "Dylan";
-
-/*
-Explicit type assignment are easier to read and more 
-intentional.
-
- --> Implicit Type
-TypeScript will "guess" the type, based on the
-assigned value: */
-
-let firstName2 = "Dylan";
-/*
-
-Note: Having TypeScript "guess" the type of a value is 
-called "infer".
-
-Note: Implicit assignment forces TypeScript to infer the value.
-----
-
-Implicit type assignment are shorter, faster to type, and 
-often used when developing and testing.
+/* TypeScript Getting Started
+==============================
 
 
-Error In Type Assignment
----------------------------
-TypeScript will throw an error if data types do not match. */
+TypeScript Compiler
+---------------------
+TypeScript is transpiled into JavaScript using a compiler.
 
-let firstName3: string = "Dylan"; // type string
-firstName3 = 33; // attempts to re-assign the value to a different type
-
-/*
-Implicit type assignment would have made firstName less 
-noticeable as a string, but both will throw an error: */
-
-let firstName4 = "Dylan"; // inferred to type string
-firstName4 = 33; // attempts to re-assign the value to a different type
-
-/*
-JavaScript will not throw an error for mismatched types.
+TypeScript being converted into JavaScript means it runs 
+anywhere that JavaScript runs!
 
 
-Unable to Infer
------------------
+Installing the Compiler
+------------------------
+  > TypeScript has an official compiler which can be installed 
+    through npm.
 
-TypeScript may not always properly infer what the type of a variable 
-may be. In such cases, it will set the type to any which disables 
-type checking. */
+  > Within your npm project, run the following command to install 
+    the compiler:  --> npm install typescript --save-dev
 
-// Implicit any as JSON.parse doesn't know what type of data it
-//returns so it can be "any" thing...
-
-const json = JSON.parse("55");
-// Most expect json to be an object, but it can be a string or 
-// a number like this example
-console.log(typeof json);
-
-/*
-This behavior can be disabled by enabling noImplicitAny as an 
-option in a TypeScript's project tsconfig.json. That is a JSON 
-config file for customizing how some of TypeScript behaves.
+  > The compiler is installed in the node_modules directory 
+    and can be run with: --> npx tsc.
 
 
-Important !: you may see primitive types capitalized like Boolean.
-
-boolean !== Boolean
-For this tutorial just know to use the lower-cased values, 
-the upper-case ones are for very specific circumstances.
+  > Which should give you an output similar to: 
+        Version 4.5.5
+        tsc: The TypeScript Compiler - Version 4.5.5
 
 
 
-*/
+Configuring the compiler
+-------------------------
+By default the TypeScript compiler will print a help message 
+when run in an empty project.
+
+The compiler can be configured using a 'tsconfig.json' file.
+
+You can ask TypeScript to create a 'tsconfig.json' with the 
+recommended settings using this cmd : --> npx tsc --init
+
+Which should give you an output similar to:
+Created a new tsconfig.json with:
+TS
+  target: es2016
+  module: commonjs
+  strict: true
+  esModuleInterop: true
+  skipLibCheck: true
+  forceConsistentCasingInFileNames: true
+
+You can learn more at https://aka.ms/tsconfig.json
+
+Here is an example of more things you could add to the 
+tsconfig.json file:
+
+{
+  "include": ["src"],
+  "compilerOptions": {
+    "outDir": "./build"
+  }
+}
+
+You can open the file in an editor to add those options. 
+This will configure the TypeScript compiler to transpile 
+TypeScript files located in the src/ directory of your 
+project, into JavaScript files in the build/ directory.
+
+This is one way to quickly get started with TypeScript, 
+there are many other options available such as a 
+create-react-app template, a node starter project, 
+and a webpack plugin. */
