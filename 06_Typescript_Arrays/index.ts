@@ -14,10 +14,8 @@ const names: string[] = [];
 names.push("Dylan"); // no error
 names.push(3); // Error: Argument of type 'number' is not assignable to parameter of type 'string'.
 
-/*
-Readonly
----------
-
+/* Readonly
+-----------
 The readonly keyword can prevent arrays from being changed.*/
 
 const names_2: readonly string[] = ["Dylan"];
@@ -25,9 +23,9 @@ names_2.push("Jack"); // Error: Property 'push' does not exist on type 'readonly
 
 // try removing the readonly modifier and see if it works?
 
-/*
-Type Inference
---------------
+
+/* Type Inference
+------------------
 TypeScript can infer the type of an array if it has values.*/
 
 const numbers = [1, 2, 3]; // inferred to type number[]
