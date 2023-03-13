@@ -24,7 +24,7 @@ TypeScript assigns a type:
  > Explicit
  > Implicit
 
-In both examples below firstName is of type string
+In the both examples below firstName is of type string
 
 <@> Explicit - writing out the type: */
 
@@ -75,6 +75,10 @@ Implicit 'any' as JSON.parse doesn't know what type of
 data it returns so it can be "any" thing... */
 
 const json = JSON.parse("55");
+//----------- solutions
+const json2: string = JSON.parse("55");
+const json3 = JSON.parse("55") as string;
+const json4: string = JSON.parse("55") as string;
 
 /* Most expect 'json' to be an object, but it can be a 
    string or a number like this example  above */
@@ -82,7 +86,7 @@ const json = JSON.parse("55");
 console.log(typeof json); // number
 
 /* This behavior can be disabled by enabling noImplicitAny 
-as an  option in a TypeScript's project 'tsconfig.json.' 
+as an option in a TypeScript's project 'tsconfig.json.' 
 That is a JSON config file for customizing how some of 
 TypeScript behaves.
 
