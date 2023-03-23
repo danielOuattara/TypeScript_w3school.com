@@ -40,7 +40,7 @@ such as auto completion. Remember, it should be avoided
 Type: unknown
 --------------
 
-'unknown' is a similar, but safer alternative to any.
+'unknown' is a similar, but safer alternative to 'any'.
 
 TypeScript will prevent 'unknown' types from being used */
 

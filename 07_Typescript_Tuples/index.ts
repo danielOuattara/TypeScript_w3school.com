@@ -10,7 +10,6 @@ TypeScript Tutorial : https://www.w3schools.com/typescript/
 
 Typed Arrays
 ------------
-
 A tuple is a typed array with a pre-defined length 
 and types for each index.
 
@@ -69,7 +68,7 @@ const ourReadonlyTuple: readonly [number, boolean, string] = [
 ourReadonlyTuple.push("Coding God took a day off");
 
 /* To learn more about access modifiers like 'readonly' go to 
-our  section on them here: TypeScript Classes.
+our section on them here: TypeScript Classes.
 
 If you have ever used React before you have worked with tuples 
 more than likely.
@@ -99,7 +98,7 @@ Destructuring Tuples
 Since tuples are arrays we can also destructure them. */
 
 const graph_2: [number, number] = [55.2, 41.3];
-const [x, y] = graph;
+const [x, y] = graph_2;
 
 /* To review destructuring check it out here.
 

@@ -15,7 +15,6 @@ There are three main primitives in JavaScript and TypeScript.
     > number  - whole numbers and floating point values
     > string  - text values like "TypeScript Rocks"
 
-
 Type Assignment
 ----------------
 When creating a variable, there are two main ways 
@@ -86,7 +85,7 @@ const json4: string = JSON.parse("55") as string;
 console.log(typeof json); // number
 
 /* This behavior can be disabled by enabling noImplicitAny 
-as an option in a TypeScript's project 'tsconfig.json.' 
+as an option in the TypeScript's project 'tsconfig.json.' 
 That is a JSON config file for customizing how some of 
 TypeScript behaves.
 

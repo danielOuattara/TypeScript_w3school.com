@@ -53,8 +53,8 @@ car_3.mileage = 2000;
 //-----------------------------------------------------------
 
 // Example with an optional property
+
 const car_4: { type: string; mileage?: number } = {
-  // no error
   type: "Toyota",
 };
 car_4.mileage = 2000;
